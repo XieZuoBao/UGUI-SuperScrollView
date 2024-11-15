@@ -18,6 +18,10 @@ public class LoopListViewInitParam
     //todo
 }
 
+/// <summary>
+/// 注意:
+///     1.所有条目的缩放比例必须是Vector3.one
+/// </summary>
 public class LoopListView : MonoBehaviour
 {
     #region Inspector面板上显示的属性
@@ -57,4 +61,111 @@ public class LoopListView : MonoBehaviour
     [SerializeField]
     private Vector2 mViewportSnapPivot = Vector2.zero;
     #endregion
+    
+    /// <summary>
+    /// 条目索引[0, itemTotalCount - 1]
+    /// </summary>
+    private int mItemIndex = -1;
+    /// <summary>
+    /// 条目id
+    /// </summary>
+    private int mItemId = -1;
+    
+    /// <summary>
+    /// 初始化列表
+    /// </summary>
+    /// <param name="itemTotalCount"></param>
+    /// <param name="onGetItemByIndex">委托参数:LoopListView,int;委托返回值:LoopListView</param>
+    /// <param name="initParam"></param>
+    public void InitListView(int itemTotalCount, System.Func<LoopListView, int, LoopListView> onGetItemByIndex,
+        LoopListViewInitParam initParam = null)
+    {
+        //todo
+    }
+
+    public LoopListView NewListViewItem(string itemPrefabName)
+    {
+        //todo
+        return null;
+    }
+
+    public void SetListItemCount(int itemCount, bool resetPos = true)
+    {
+        //todo
+    }
+
+    /// <summary>
+    /// 在???中查找可见条目
+    /// </summary>
+    /// <param name="itemIndex">取值范围[0, mItemTotalCount - 1]</param>
+    /// <returns>如果itemIndex对应的条目不可见,则返回null</returns>
+    public LoopListView GetShownItemByItemIndex(int itemIndex)
+    {
+        //todo
+        return null;
+    }
+
+    /// <summary>
+    /// 在mItemList中查找可见条目
+    /// </summary>
+    /// <param name="index">[0, mItemList.Count - 1]</param>
+    /// <returns></returns>
+    public LoopListView GetShownItemByIndex(int index)
+    {
+        //todo
+        return null;
+    }
+
+    public int ShowItemCount
+    {
+        get
+        {
+            //todo
+            return 0;
+        }
+    }
+
+    public void RefreshItemByItemIndex(int itemIndex)
+    {
+        //todo
+    }
+
+    public void RefreshAllShownItem()
+    {
+        //todo
+    }
+
+    public void MovePanelToItemIndex(int itemIndex, float offset)
+    {
+        //todo
+    }
+
+    public void OnItemSizeChanged(int itemIndex)
+    {
+        //todo
+    }
+
+    public void FinishSnapImmediately()
+    {
+        //todo
+    }
+
+    public int CurSnapNearestItemIndex
+    {
+        get
+        {
+            //todo
+            return 0;
+        }
+    }
+
+    public void SetSnapTargetItemIndex(int itemIndex)
+    {
+        //todo
+    }
+
+    public void ClearSnapData()
+    {
+        //todo
+    }
 }
