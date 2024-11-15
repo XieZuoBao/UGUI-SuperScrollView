@@ -1,4 +1,9 @@
-﻿namespace Common
+﻿public class ItemPosMgr
 {
-    public record ItemPosMgr();
+    public float mItemDefaultSize = 100;
+
+    public ItemPosMgr(float itemDefalutSize)
+    {
+        mItemDefaultSize = itemDefalutSize;
+    }
 }
